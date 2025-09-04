@@ -14,6 +14,6 @@ interface SiswaDao {
     suspend fun insert(siswa: Siswa)
 
     // Get All Data
-    @Query
+    @Query("SELECT * FROM siswa ORDER BY nama ASC")
     fun getAllSiswa(): Flow<List<Siswa>>
 }
